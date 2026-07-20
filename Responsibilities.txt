@@ -1,0 +1,77 @@
+Responsibilities
+main.py
+Load config
+Show banner
+Start capture loop
+Handle Ctrl+C gracefully
+capture.py
+Select interface
+Capture packets with Scapy
+Send packets to parser
+parser.py
+
+Extract fields like:
+
+{
+    "src_ip": "...",
+    "dst_ip": "...",
+    "protocol": "...",
+    "src_port": ...,
+    "dst_port": ...,
+    "flags": "...",
+    "payload": ...
+}
+detector.py
+
+Just dispatches packets:
+
+port_scan.detect(packet)
+syn_flood.detect(packet)
+icmp_flood.detect(packet)
+detections/
+
+Each detector is independent:
+
+def detect(packet):
+    ...
+
+If it finds something:
+
+return Alert(...)
+
+Otherwise:
+
+return None
+logger.py
+
+Prints something like:
+
+[HIGH] Port Scan
+Source : 192.168.1.25
+Target : 192.168.1.1
+Ports  : 22,80,443
+Time   : 15:23:12
+
+and appends it to logs/alerts.log.
+
+CLI Look
+══════════════════════════════════════
+           HydraIDS v1.0
+══════════════════════════════════════
+
+Interface : wlan0
+Status    : Monitoring
+Packets   : 14,284
+Alerts    : 7
+Runtime   : 00:08:31
+
+──────────────────────────────────────
+
+[HIGH] Port Scan
+192.168.1.14 → 192.168.1.1
+
+[MEDIUM] SYN Flood
+10.0.0.4 → 10.0.0.2
+
+──────────────────────────────────────
+Press Ctrl+C to stop

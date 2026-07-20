@@ -1,0 +1,22 @@
+v1.0 (CLI)
+
+✅ Live packet capture
+✅ Packet parsing
+✅ Signature-based detection
+✅ Rule engine
+✅ Logging
+✅ Rich terminal interface
+
+v1.1
+
+PCAP file analysis mode
+Config file
+Colored alerts
+Export to JSON/CSV
+
+v2.0
+
+FastAPI REST API
+Web dashboard
+Live charts
+Searchable alerts
