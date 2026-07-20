@@ -1,11 +1,26 @@
 from utils.banner import print_banner
+from core.interface import display_interfaces
 
 
 def main():
     print_banner()
-    print("[*] Initializing HydraIDS...")
-    print("[*] Loading configuration...")
-    print("[*] Ready.")
+
+    interfaces = display_interfaces()
+
+    while True:
+        try:
+            choice = int(input("\nSelect Interface > "))
+
+            if 1 <= choice <= len(interfaces):
+                selected = interfaces[choice - 1]
+                break
+
+            print("Invalid choice.")
+
+        except ValueError:
+            print("Enter a number.")
+
+    print(f"\nSelected Interface: {selected}")
 
 
 if __name__ == "__main__":
