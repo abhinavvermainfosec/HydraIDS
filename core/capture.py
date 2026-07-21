@@ -1,6 +1,7 @@
 from scapy.all import sniff
 
 from core.parser import parse_packet, display_packet
+from core.detector import process_packet
 
 
 def packet_callback(packet):
@@ -9,7 +10,11 @@ def packet_callback(packet):
     if parsed_packet is None:
         return
 
+    # Display packet
     display_packet(parsed_packet)
+
+    # Pass packet to detection engine
+    process_packet(parsed_packet)
 
 
 def start_capture(interface):
