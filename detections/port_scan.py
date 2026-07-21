@@ -1,8 +1,6 @@
 import time
-from rich.console import Console
-from rich.panel import Panel
 
-console = Console()
+from core.alerts import raise_alert
 
 # Detection configuration
 TIME_WINDOW = 30          # seconds
@@ -14,7 +12,7 @@ scan_tracker = {}
 
 def detect(packet):
     """
-    Detect TCP SYN port scans.
+    Detect TCP SYN Port Scans.
     """
 
     # Only inspect TCP packets
@@ -48,19 +46,11 @@ def detect(packet):
 
     # Trigger alert
     if unique_ports >= PORT_THRESHOLD:
-        console.print(
-            Panel.fit(
-                f"""
-[bold red]PORT SCAN DETECTED[/bold red]
-
-Attacker IP : {src_ip}
-Unique Ports: {unique_ports}
-Time Window : {TIME_WINDOW} seconds
-Severity    : HIGH
-""",
-                title="[bold red]INTRUSION ALERT[/bold red]",
-                border_style="red",
-            )
+        raise_alert(
+            attack="TCP SYN Port Scan",
+            severity="HIGH",
+            attacker=src_ip,
+            description=f"{unique_ports} unique ports detected within {TIME_WINDOW} seconds."
         )
 
         # Prevent repeated alerts for the same scan
