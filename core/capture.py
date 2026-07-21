@@ -1,7 +1,8 @@
 from scapy.all import sniff
 
-from core.parser import parse_packet, display_packet
+import utils.config as config
 from core.detector import process_packet
+from core.parser import display_packet, parse_packet
 
 
 def packet_callback(packet):
@@ -10,10 +11,9 @@ def packet_callback(packet):
     if parsed_packet is None:
         return
 
-    # Display packet
-    display_packet(parsed_packet)
+    if config.DEBUG:
+        display_packet(parsed_packet)
 
-    # Pass packet to detection engine
     process_packet(parsed_packet)
 
 

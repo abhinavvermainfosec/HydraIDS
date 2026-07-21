@@ -22,6 +22,10 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 sudo .venv/bin/python main.py
+
+For debug mode:
+
+sudo .venv/bin/python main.py --debug
 ```
 
 <img width="450" height="285" alt="image" src="https://github.com/user-attachments/assets/b110aed5-e22a-470e-b377-8be7410811d5" />
