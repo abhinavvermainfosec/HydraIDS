@@ -30,12 +30,38 @@ sudo .venv/bin/python main.py --debug
 
 <img width="450" height="285" alt="image" src="https://github.com/user-attachments/assets/b110aed5-e22a-470e-b377-8be7410811d5" />
 
-# Current Detection Modules
 
-- ✅ TCP SYN Port Scan
-- 🚧 SYN Flood (planned)
-- 🚧 ICMP Flood (planned)
-- 🚧 ARP Spoofing (planned)
+# Current Features
+
+✅ Live packet capture
+
+✅ TCP packet parsing
+
+✅ TCP SYN Port Scan Detection
+
+✅ Modular Detection Engine
+
+✅ Alert Manager
+
+✅ Alert Logging
+
+✅ Debug Mode
+
+# Roadmap
+
+⬜ SYN Flood
+
+⬜ UDP Scan
+
+⬜ FIN Scan
+
+⬜ NULL Scan
+
+⬜ XMAS Scan
+
+⬜ ARP Spoof
+
+⬜ Dashboard
 
 # Disclaimer
 
