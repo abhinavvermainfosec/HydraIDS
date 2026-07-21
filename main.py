@@ -1,5 +1,6 @@
 from utils.banner import print_banner
 from core.interface import display_interfaces
+from core.capture import start_capture
 
 
 def main():
@@ -18,9 +19,11 @@ def main():
             print("Invalid choice.")
 
         except ValueError:
-            print("Enter a number.")
+            print("Please enter a number.")
 
-    print(f"\nSelected Interface: {selected}")
+    print(f"\n[*] Selected: {selected}")
+
+    start_capture(selected)
 
 
 if __name__ == "__main__":
