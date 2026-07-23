@@ -138,12 +138,12 @@ sudo .venv/bin/python main.py --debug
 - [x] Alert manager
 - [x] Alert logging
 - [x] Configurable debug mode
+- [x] SYN Flood Detection
 
 ---
 
 ## 🚧 Roadmap
 
-- [ ] TCP SYN Flood Detection
 - [ ] UDP Scan Detection
 - [ ] FIN Scan Detection
 - [ ] NULL Scan Detection
