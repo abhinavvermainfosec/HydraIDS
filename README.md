@@ -55,34 +55,6 @@ HydraIDS is an open-source IDS built from scratch using Python and Scapy. It is 
 
 ---
 
-## 📦 Project Structure
-
-```text
-HydraIDS/
-│
-├── core/
-│   ├── alerts.py
-│   ├── capture.py
-│   ├── detector.py
-│   ├── interface.py
-│   ├── logger.py
-│   └── parser.py
-│
-├── detections/
-│   ├── __init__.py
-│   └── port_scan.py
-│
-├── logs/
-├── utils/
-│
-├── main.py
-├── requirements.txt
-├── LICENSE
-└── README.md
-```
-
----
-
 ## 🚀 Installation
 
 Clone the repository:
