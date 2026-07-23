@@ -94,7 +94,8 @@ sudo .venv/bin/python main.py --debug
 ## 📸 Preview
 
 <p align="center">
-<img width="450" alt="HydraIDS" src="https://github.com/user-attachments/assets/b110aed5-e22a-470e-b377-8be7410811d5">
+<img width="467" height="744" alt="Screenshot_20260723_185706" src="https://github.com/user-attachments/assets/237e1809-b8d9-4429-89de-aa4e5774f745" />
+
 </p>
 
 ---
