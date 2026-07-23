@@ -17,7 +17,7 @@ def print_banner():
     console.print(
         Panel.fit(
             f"[bold cyan]{banner}[/bold cyan]\n"
-            "[green]HydraIDS v1.0[/green]\n"
+            "[green]HydraIDS v0.2.0[/green]\n"
             "Lightweight CLI Intrusion Detection System",
             border_style="cyan",
         )
