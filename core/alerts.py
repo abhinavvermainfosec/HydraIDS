@@ -9,7 +9,7 @@ from core.logger import log_alert
 console = Console()
 
 # Don't show the same alert from the same attacker for 60 seconds
-ALERT_COOLDOWN = 60
+from utils.config import ALERT_COOLDOWN
 
 # {(attack, attacker): last_alert_time}
 recent_alerts = {}
